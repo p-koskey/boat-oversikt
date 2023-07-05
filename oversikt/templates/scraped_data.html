@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th>Town</th>
+        <th>Vessel</th>
+        <th>Pending</th>
+        <th>Phone Number</th>
+        <th>Comment</th>
+        <th>Region</th>
+        <th>Type</th>
+        <th>Status</th>
+    </tr>
+    {% for data in scraped_data %}
+        <tr>
+            <td>{{ data.town }}</td>
+            <td>{{ data.vessel }}</td>
+            <td>{{ data.pending }}</td>
+            <td>{{ data.phone_number }}</td>
+            <td>{{ data.comment }}</td>
+            <td>{{ data.region }}</td>
+            <td>{{ data.type }}</td>
+            <td bgcolor="{{data.status}}">{{ data.status }}</td>
+        </tr>
+    {% endfor %}
+</table>
